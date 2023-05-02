@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25.0)
 
-project("EmuGB" VERSION 1.0.0)
+project("Gamefynx" VERSION 1.0.0)
 
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules)
 

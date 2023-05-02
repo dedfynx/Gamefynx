@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-namespace DedOs
+namespace Gamefynx
 {
     Cartouche::Cartouche()
     {
@@ -50,7 +50,7 @@ namespace DedOs
             header = (romHeader*)(data + 0x100);
             header->title[15] = 0;
 
-            std::cout << "Cartouche chargée " << "\n";
+            std::cout << "Cartouche chargee " << "\n";
             std::cout << "Titre      : " << header->title << "\n";
             std::cout << "Type       : " << nameType() << "\n";
             std::cout << "ROM size   : " << std::hex << (int)header->rom_size << "\n";

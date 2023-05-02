@@ -5,9 +5,7 @@
 #include <map>
 #include <cstdint>
 
-#define CART_SIZE 0x200000
-
-namespace DedOs
+namespace Gamefynx
 {
     typedef struct
     {

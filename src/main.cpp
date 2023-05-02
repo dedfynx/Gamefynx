@@ -11,12 +11,13 @@
 #include "UI.h"
 
 //temp
-#include "Cartouche.h"
+#include "Emulator.h"
 
 
 
 int main(int argc, char** argv)
 {
+    #pragma region setupGlfw
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
@@ -85,6 +86,9 @@ int main(int argc, char** argv)
     // Creation shaders
     Shader shaders("../shaders/shader.vs", "../shaders/shader.fs");
 
+    #pragma endregion
+
+    Gamefynx::Emulator emu{argv[1]};
     // Boucle principale de rendu
     while (!glfwWindowShouldClose(window))
     {
@@ -92,8 +96,8 @@ int main(int argc, char** argv)
         if (ui.getAction("Load"))
         {
             //action
-            DedOs::Cartouche c{};
-            c.load(argv[1]);  
+            
+            //c.load(argv[1]);  
             //reset
             ui.resetAction("Load");      
         }
